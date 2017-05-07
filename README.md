@@ -9,6 +9,8 @@ Vuez is currently under development, and the document would be updated regularly
 
 中文文档请点击[这里](https://github.com/markselby9/vuez/wiki/Document_zh)。
 
+![alt tag](https://cloud.githubusercontent.com/assets/3454734/25782362/203fa0b2-337c-11e7-8b2d-9486625edc2b.png)
+
 ## Installation
 
 As always, vuez can be installed through npm or yarn.
@@ -88,6 +90,7 @@ Please check the document through [wiki](https://github.com/markselby9/vuez/wiki
 Please check the Vue.js todolist app project using vuez, by running `npm run dev`.
 
 - [Todo List](https://github.com/markselby9/vuez/tree/develop/examples/todolist)
+- [Weather Application](https://github.com/markselby9/vue2-vuez-weather) A weather application using Vuez and Vue2.x.
 
 
 ## License
