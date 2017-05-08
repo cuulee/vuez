@@ -11,6 +11,27 @@ Vuez is currently under development, and the document would be updated regularly
 
 ![alt tag](https://cloud.githubusercontent.com/assets/3454734/25782362/203fa0b2-337c-11e7-8b2d-9486625edc2b.png)
 
+
+## Example projects
+
+Please check the Vue.js todolist app project using vuez, by running `npm run dev`.
+
+- [Todo List](https://github.com/markselby9/vuez/tree/develop/examples/todolist)
+- [Weather Application](https://github.com/markselby9/vue2-vuez-weather) A weather application using Vuez and Vue2.x.
+
+
+## How about Vuex?
+
+Some peers have mentioned about the confusing difference between Vuez and [Vuex](https://vuex.vuejs.org/). I'd like to say that for these developers below, please **skip Vuez and use Vuex**, at least for now:
+
+1. Developers for **commercial or governmental projects**. Vuex is the official choice for Vue.js projects, with official and long-term support. You shouldn't consider Vuez for now as it doesn't have so much quality guarantee and document supports.
+
+2. Developers in **team more than 3 people**. The core of Vuez is the 'observing table' with observed names on it. For a large-scaled team, it might cause bugs when collaborating, because Vuez has very little limitations on the usage of the store object. A team should consider Vuex, as Vuex has the 'modules' structure which I think is suitable for a team. And codes in Vuex projects are always easier to merge (in my experience).
+
+However, if you're not one of those developers I listed above, and you want to keep things as simple as possible when facing state management, use Vuez cause it's really simple. You can check the example projects for that simplicity. Just keep the 'table' in mind when developing, and that's enough.
+
+And if you face any issues in your usage, please kindly give them to me, or help Vuez with a PR yourself :). I know it's a not-mainstream and not-so-stable choice, but I do think that it has its own advantages, and can become a cool helper in your Vue.js projects.
+
 ## Installation
 
 As always, vuez can be installed through npm or yarn.
@@ -32,6 +53,13 @@ import Vue from 'vue'
 import Vuez from 'vuez'
 
 Vue.use(Vuez)
+const store = new Vuez.Store(); // initialize a new store
+
+new Vue({
+		store: store,  // and use the store
+		el: '#app',
+		render: h => h(App)
+});
 ```
 
 And then please follow the 'Basic usage' part to use Vuez.
@@ -84,14 +112,6 @@ store.observe('changing', changingObject);  // trigger the action and console wo
 ## Document
 
 Please check the document through [wiki](https://github.com/markselby9/vuez/wiki/Document).
-
-## Examples
-
-Please check the Vue.js todolist app project using vuez, by running `npm run dev`.
-
-- [Todo List](https://github.com/markselby9/vuez/tree/develop/examples/todolist)
-- [Weather Application](https://github.com/markselby9/vue2-vuez-weather) A weather application using Vuez and Vue2.x.
-
 
 ## License
 
